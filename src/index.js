@@ -1,3 +1,8 @@
+import Metameta from './metameta.js'
+
+const appearDuration = 300
+const appearDurationFinal = 1000
+
 const setLoader = isShown => {
     if (isShown) {
         console.log('Should show loader')
@@ -7,17 +12,77 @@ const setLoader = isShown => {
     console.log('Should hide loader')
 }
 
-// const handleDCL = () => {
+const queue = new Metameta({
+    interval: appearDuration,
+    bias: 1
+})
 
-// }
+const handleHeavyElements = () => Array.from(document.querySelectorAll('img')).forEach(img => {
 
-// const handleHeavyElements = () => {
+    img.classList.add('butter-loading')
 
-// }
+    img.addEventListener('load', e => {
+        const loadedImg = e.target
+        console.log('Loaded: ', loadedImg)
 
-// const handleWindowOnLoad = () => {
+        queue.push(() => {
+            console.log('should appear')
+            loadedImg.classList.add('butter-loaded')
 
-// }
+            setTimeout(() => {
+                loadedImg.classList.remove('butter-loading', 'butter-loaded')
+                if (loadedImg.getAttribute('class') === '') {
+                    loadedImg.removeAttribute('class')
+                }
+            }, appearDurationFinal)
+        })
+
+    }, {
+        once: true
+    })
+})
+
+const init = () => {
+    document.head.innerHTML += `
+        <style id="butter">
+            .butter-loading {
+                background-image: linear-gradient(to right, #eee, #ededed);
+                filter: contrast(0%) brightness(185%);
+            }
+
+            .butter-loading.butter-loaded {
+                filter: none;
+                animation:
+                    appear-position ${appearDuration}ms,
+                    appear-opacity ${appearDurationFinal}ms;
+
+                animation-fill-mode: forwards;
+                animation-timing-function: cubic-bezier(.25, .8, .25, 1);
+            }
+
+            @keyframes appear-position {
+                from {
+                    transform: translateY(20px) scale(0.97);
+                } to {
+                    transform: translateY(0) scale(1);
+                }
+            }
+
+            @keyframes appear-opacity {
+                from {
+                    opacity: 0;
+                } to {
+                    opacity: 1;
+                }
+            }
+        </style>
+    `
+}
+
+const cleanup = () => {
+    const styles = document.getElementById('butter')
+    styles.parentNode.removeChild(styles)
+}
 
 export default (params = {}) => {
 
@@ -30,6 +95,8 @@ export default (params = {}) => {
     let isLoaderShown = false
 
     console.log(`START`)
+
+    init()
 
     if (initialReadyState === 'loading') {
         // listen for DOMContentLoaded
@@ -44,7 +111,7 @@ export default (params = {}) => {
             }
         }, msBeforeLoader)
 
-        document.addEventListener('readystatechange', () => {
+        const onReadyStateChange = () => {
             currentReadyState = document.readyState
 
             const shouldHideLoader = 
@@ -58,17 +125,27 @@ export default (params = {}) => {
             if (currentReadyState === 'interactive') {
                 console.log(`ReadyState is interactive, should add listeners to heavy elements`)
                 clearTimeout(loaderTimeout)
+                handleHeavyElements()
 
             } else if (currentReadyState === 'complete') {
                 console.log(`ReadyState is complete, should show everything already. FINISH, destroy everything`)
+                document.removeEventListener('readystatechange', onReadyStateChange)
+                queue.push(cleanup)
             }
-        })
+        }
+
+        document.addEventListener('readystatechange', onReadyStateChange)
 
     } else if (initialReadyState === 'interactive') {
         // add listeners to heavy elements
 
         console.log(`Initial readyState is interactive, should add listeners to heavy elements`)
 
+        handleHeavyElements()
+
+        window.addEventListener('load', () => queue.push(cleanup), {
+            once: true
+        })
     }
     
     // we end up here if document is loaded — we should do nothing
