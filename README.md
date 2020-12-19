@@ -3,6 +3,8 @@ Makes your webpage loading smooth and animated.
 
 [Demo](https://miloslav.website/butter)
 
+![Without Butter](https://miloslav.website/butter/before.gif) ![With Butter](https://miloslav.website/butter/after.gif)
+
 ## Why?
 
 Default webpage loading process is kinda ugly. Heavy elements like images appear too harsh when they load. To make this experience smoother, 🧈 Butter exists.
