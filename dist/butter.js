@@ -182,7 +182,7 @@ var butter = (function () {
 
         imagesArray.forEach((img, index) => {
 
-            const restoreImg = img => {
+            const restoreImg = () => {
                 img.classList.remove('butter-loading', 'butter-loaded');
                 if (img.getAttribute('class') === '') {
                     img.removeAttribute('class');
@@ -196,21 +196,24 @@ var butter = (function () {
                 }
             };
             
-            const handleImg = img => queue.push(() => {
+            const handleImg = () => queue.push(() => {
                 img.classList.add('butter-loaded');
-                setTimeout(() => restoreImg(img), config.appearDurationFinal);
+                setTimeout(() => {
+                    restoreImg();
+                    img.removeEventListener('load', handleImg);
+                    img.removeEventListener('error', handleImg);
+                }, config.appearDurationFinal);
             });
-        
-        
+
             img.classList.add('butter-loading');
         
             if (img.complete) {
-                setTimeout(() => handleImg(img), 500);
+                setTimeout(handleImg, 500);
                 return
             }
         
-            img.addEventListener('load', () => handleImg(img), { once: true });
-            img.addEventListener('error', () => handleImg(img), { once: true });
+            img.addEventListener('load', handleImg, { once: true });
+            img.addEventListener('error', handleImg, { once: true });
         });
     };
 
