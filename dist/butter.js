@@ -4,7 +4,7 @@ var butter = (function () {
     var config = {
         appearDuration: 300,
         appearDurationFinal: 1000,
-        selector: 'img[width][height]',
+        selector: 'img[width][height][alt]:not[alt=""]',
     };
 
     const init = () => {
