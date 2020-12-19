@@ -1,13 +1,14 @@
 {
-  "name": "cosmopolite",
-  "version": "1.1.0",
-  "description": "🤝 Make a ES Module for NPM and a dist file for <script> at the same time",
-  "repository": "git@github.com:mvoloskov/cosmopolite.git",
+  "name": "butter",
+  "version": "1.0.0",
+  "description": "🧈 Makes your webpage loading smooth and animated ",
+  "repository": "git@github.com:mvoloskov/butter.git",
   "main": "src/index.js",
   "author": "mvoloskov",
   "license": "BSL-1.0",
   "scripts": {
-    "build-iife": "rollup -c"
+    "build-iife": "rollup -c",
+    "watch": "rollup -c --watch"
   },
   "husky": {
     "hooks": {

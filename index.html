@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<title>Butter demo page</title>
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mvoloskov/potion/potion.min.css" />
+
+		<style>
+			img {
+				padding: 0;
+				margin: 0;
+			}
+
+			.grid-3 {
+				display: grid;
+				gap: 5px;
+				margin-bottom: 5px;
+				grid-template-areas:
+					'a b'
+					'a c';
+			}
+
+			.grid-3 > *:nth-child(1) {
+				grid-area: a;
+			}
+
+			.grid-3 > *:nth-child(2) {
+				grid-area: b;
+			}
+
+			.grid-3 > *:nth-child(3) {
+				grid-area: c;
+			}
+
+			.grid-1 {
+				display: grid;
+				gap: 5px;
+				grid-template-areas:
+					'b a'
+					'c a';
+			}
+
+			.grid-1 > *:nth-child(1) {
+				grid-area: a;
+			}
+
+			.grid-1 > *:nth-child(2) {
+				grid-area: b;
+			}
+
+			.grid-1 > *:nth-child(3) {
+				grid-area: c;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1 class="title">
+			Butter
+		</h1>
+		<p>
+			🧈 Makes your webpage loading smooth and animated.
+		</p>
+		<p>
+			<a
+				href="https://github.com/mvoloskov/butter"
+				target="_blank"
+				rel="noopener noreferrer"
+				>Get it on GitHub</a
+			>
+		</p>
+		<p class="c-gray" style="opacity: 0.3">
+			A paragraph (from the Greek paragraphos, “to write beside” or “written
+			beside”) is a self-contained unit of a discourse in writing dealing
+			with a particular point or idea. A paragraph consists of one or more
+			sentences. Though not required by the syntax of any language,
+			paragraphs are usually an expected part of formal writing, used to
+			organize longer prose.
+		</p>
+
+		<div class="grid-3">
+			<img
+				src="https://placekitten.com/800/1000"
+				width="400"
+				height="500"
+				alt="Image alt text"
+			/>
+			<img
+				src="https://placekitten.com/800/400"
+				width="400"
+				height="200"
+				alt="Image alt text"
+			/>
+			<img
+				src="https://placekitten.com/800/587"
+				width="400"
+				height="293"
+				alt="Image alt text"
+			/>
+		</div>
+		<div class="grid-1">
+			<img
+				src="https://placekitten.com/801/999"
+				width="400"
+				height="500"
+				alt="Image alt text"
+			/>
+			<img
+				src="https://placekitten.com/801/401"
+				width="400"
+				height="200"
+				alt="Image alt text"
+			/>
+			<img
+				src="https://placekitten.com/801/588"
+				width="400"
+				height="293"
+				alt="Image alt text"
+			/>
+		</div>
+		<p class="c-gray" style="opacity: 0.3">
+			A paragraph (from the Greek paragraphos, “to write beside” or “written
+			beside”) is a self-contained unit of a discourse in writing dealing
+			with a particular point or idea. A paragraph consists of one or more
+			sentences. Though not required by the syntax of any language,
+			paragraphs are usually an expected part of formal writing, used to
+			organize longer prose.
+		</p>
+		<p class="c-gray" style="opacity: 0.3">
+			A paragraph (from the Greek paragraphos, “to write beside” or “written
+			beside”) is a self-contained unit of a discourse in writing dealing
+			with a particular point or idea. A paragraph consists of one or more
+			sentences. Though not required by the syntax of any language,
+			paragraphs are usually an expected part of formal writing, used to
+			organize longer prose.
+		</p>
+		<script src="dist/butter.js"></script>
+		<script>
+			butter()
+		</script>
+	</body>
+</html>
