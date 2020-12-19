@@ -3,9 +3,7 @@ Makes your webpage loading smooth and animated.
 
 [Demo](https://miloslav.website/butter)
 
-![Without Butter](https://miloslav.website/butter/without.gif)
-
-![With Butter](https://miloslav.website/butter/with.gif)
+<img src="https://miloslav.website/butter/without.gif" alt="" /> <img src="https://miloslav.website/butter/with.gif" alt="" />
 
 ## Why?
 
