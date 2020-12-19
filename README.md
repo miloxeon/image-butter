@@ -40,15 +40,19 @@ It's recommended that you use Butter as an external script because it's better t
 </head>
 ```
 
-**Every image should have `width` and `height`**. We can't predict image size before it loads, but you can predefine it. **Butter will ignore images without inline width and height**.
+**Every image should have `width` and `height`**. We can't predict image size before it loads, but you can predefine it. **Butter will ignore images without inline width and height**. It also ignores decorative images (e.g. images with empty `alt`).
 
 ```HTML
-<!-- Good -->
+<!-- Bad, will be ignored -->
+<img src="https://example.com/800/480" alt="" />
+
+
+<!-- Decorative, will be ignored -->
 <img src="https://example.com/800/480" width="800" height="480" alt="" />
 
 
-<!-- Bad, will be ignored -->
-<img src="https://example.com/800/480" alt="" />
+<!-- Good, will animate -->
+<img src="https://example.com/800/480" width="800" height="480" alt="Cute cat" />
 ```
 
 As soon as you included the script, called `butter()` and made sure your images have `width` and `height`, this will work immediately. No further configuration is needed.
