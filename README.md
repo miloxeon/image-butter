@@ -45,6 +45,10 @@ It's recommended that you use Butter as an external script because it's better t
 <img src="https://example.com/800/480" alt="" />
 ```
 
+As soon as you included the script, called `butter()` and made sure your images have `width` and `height`, this will work immediately. No further configuration is needed.
+
+## Alternative usage (as a module)
+
 If you know what you're doing, you can always use it as a dependency:
 
 ```
