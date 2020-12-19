@@ -1,5 +1,7 @@
 # 🧈 Butter
-Makes your webpage loading smooth and animated 
+Makes your webpage loading smooth and animated. 
+
+[Demo](https://miloslav.website/butter)
 
 ## Why?
 
