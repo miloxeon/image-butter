@@ -22,6 +22,10 @@ It coordinates the document loading process and shows images as soon as they ful
 - 🛠 Framework-agnostic — works with everything from Knockout.js to Web Components. Relies fully on browser API.
 - 👌 Zero-dependency and zero-configuration.
 
+## Caveats
+
+There is a [bug in Safari](https://github.com/angular/angular/issues/37440) which will make every transition linear. That's a bummer from the design point of view, but everything still works.
+
 ## Usage
 
 It's recommended that you use Butter as an external script because it's better to put it into `<head>`, not into `<body>` as usual. Butter needs to step in *before* page fully loads. So just put it into `head`:
