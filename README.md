@@ -3,7 +3,7 @@ Makes your webpage loading smooth and animated.
 
 [Demo](https://miloslav.website/butter)
 
-<img src="https://miloslav.website/butter/without.gif" alt="" /> <img src="https://miloslav.website/butter/with.gif" alt="" />
+<img src="https://miloslav.website/butter/without.gif" width="300" alt="" /> <img src="https://miloslav.website/butter/with.gif" width="300" alt="" />
 
 ## Why?
 
