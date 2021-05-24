@@ -7,7 +7,7 @@ Makes your webpage loading smooth and animated.
 
 ## Why?
 
-Default webpage loading process is kinda ugly. Heavy elements like images appear too harsh when they load. To make this experience smoother, 🧈 Butter exists.
+Default webpage loading process is kinda ugly. Heavy elements like images appear too harshly when they load. To make this experience smoother, 🧈 Butter exists.
 
 ## What it does?
 
