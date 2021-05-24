@@ -1,9 +1,9 @@
-# 🧈 Butter
+# 🧈 Image Butter
 Makes your webpage loading smooth and animated. 
 
-[Demo](https://miloslav.website/butter)
+[Demo](https://miloslav.website/image-butter)
 
-<img src="https://miloslav.website/butter/without.gif" width="300" alt="" /> <img src="https://miloslav.website/butter/with.gif" width="300" alt="" />
+<img src="https://miloslav.website/image-butter/without.gif" width="300" alt="" /> <img src="https://miloslav.website/image-butter/with.gif" width="300" alt="" />
 
 ## Why?
 
@@ -33,7 +33,7 @@ It's recommended that you use Butter as an external script because it's better t
 ```HTML
 <head>
     ...
-    <script src="https://cdn.jsdelivr.net/gh/mvoloskov/butter/dist/butter.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mvoloskov/image-butter/dist/butter.min.js"></script>
     <script>
         butter()
     </script>
@@ -62,11 +62,11 @@ As soon as you included the script, called `butter()` and made sure your images 
 If you know what you're doing, you can always use it as a dependency:
 
 ```
-npm install mvoloskov/butter
+npm install mvoloskov/image-butter
 ```
 
 ```JS
-import butter from 'butter'
+import butter from 'image-butter'
 
 // the earlier you call it the better
 butter()
