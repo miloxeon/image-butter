@@ -1,14 +1,18 @@
 {
   "name": "butter",
   "version": "1.0.0",
-  "description": "🧈 Makes your webpage loading smooth and animated ",
-  "repository": "git@github.com:mvoloskov/butter.git",
+  "description": "🧈 Your images will load smoothly and animated without any config",
+  "repository": "git@github.com:mvoloskov/image-butter.git",
   "main": "src/index.js",
   "author": "mvoloskov",
   "license": "BSL-1.0",
+  "files": [
+    "/src"
+  ],
   "scripts": {
     "build-iife": "rollup -c",
     "watch": "rollup -c --watch",
+    "test": "exit 0",
     "serve": "serve",
     "dev": "concurrently 'npm run watch' 'npm run serve'"
   },
