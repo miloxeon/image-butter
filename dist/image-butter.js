@@ -1,4 +1,4 @@
-var butter = (function () {
+var imageButter = (function () {
     'use strict';
 
     var config = {

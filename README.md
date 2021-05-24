@@ -48,7 +48,7 @@ It's recommended that you use Butter as an external script because it's better t
 ```HTML
 <head>
     ...
-    <script src="https://cdn.jsdelivr.net/gh/mvoloskov/image-butter/dist/butter.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mvoloskov/image-butter/dist/image-butter.min.js"></script>
     <script>
         imageButter()
     </script>
