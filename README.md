@@ -77,7 +77,7 @@ As soon as you included the script, called `butter()` and made sure your images 
 If you know what you're doing, you can always use it as a dependency:
 
 ```
-npm install mvoloskov/image-butter
+npm install image-butter
 ```
 
 ```JS
