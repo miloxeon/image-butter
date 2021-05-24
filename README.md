@@ -50,7 +50,7 @@ It's recommended that you use Butter as an external script because it's better t
     ...
     <script src="https://cdn.jsdelivr.net/gh/mvoloskov/image-butter/dist/butter.min.js"></script>
     <script>
-        butter()
+        imageButter()
     </script>
 </head>
 ```

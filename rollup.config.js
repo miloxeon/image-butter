@@ -5,6 +5,6 @@ export default {
     output: {
         file: `dist/${packageJson.name}.js`,
         format: 'iife',
-        name: packageJson.name
+        name: 'imageButter',
     }
 }
