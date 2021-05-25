@@ -18,7 +18,7 @@
 </p>
 
 # 🧈 Image Butter
-Makes your webpage loading smooth and animated. 
+Smooth, animated image load without any config.
 
 ## Why?
 
