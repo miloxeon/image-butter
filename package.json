@@ -1,6 +1,6 @@
 {
   "name": "image-butter",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "🧈 Smooth, animated image load without any config",
   "repository": "git@github.com:mvoloskov/image-butter.git",
   "main": "src/index.js",
