@@ -2,12 +2,9 @@
     <img src="https://user-images.githubusercontent.com/14220138/119407585-f3d6e400-bcd3-11eb-90fa-01f3caac9bb8.gif" width="300" alt="" /> <img src="https://user-images.githubusercontent.com/14220138/119407635-06511d80-bcd4-11eb-8ffc-402bc01cdca2.gif" width="300" alt="" />
 </p>
 <p align="center">
-    <a href="https://github.com/mvoloskov/image-butter/blob/master/package.json"><img src="https://img.shields.io/badge/dependencies-0-brightgreen" alt="Dependencies"></a>
+    <a href="https://github.com/miloxeon/image-butter/blob/master/package.json"><img src="https://img.shields.io/badge/dependencies-0-brightgreen" alt="Dependencies"></a>
     <a href="https://www.npmjs.com/package/image-butter"><img alt="npm" src="https://img.shields.io/npm/v/image-butter"></a>
-    <img alt="License" src="https://img.shields.io/github/license/mvoloskov/image-butter?color=brightgreen">
-    <a href="https://www.buymeacoffee.com/mvoloskov"><img alt="Sponsor this project" src="https://img.shields.io/badge/-sponsor-ffdd00?logo=buy-me-a-coffee&logoColor=black"></a>
-    <a href="https://github.com/mvoloskov"><img alt="My github" src="https://img.shields.io/github/followers/mvoloskov?style=social"></a>
-    <a href="https://twitter.com/intent/user?screen_name=mvoloskov"><img alt="My twitter" src="https://img.shields.io/twitter/follow/mvoloskov?style=social"></a>
+    <img alt="License" src="https://img.shields.io/github/license/miloxeon/image-butter?color=brightgreen">
 </p>
 <p align="center">
     <a href="https://miloslav.website/image-butter">Demo</a>
@@ -18,7 +15,7 @@
 </p>
 
 # 🧈 Image Butter
-Smooth, animated image load without any config.
+Smooth, animated image load with zero config.
 
 ## Why?
 
